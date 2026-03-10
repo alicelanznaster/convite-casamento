@@ -1,0 +1,60 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@300;400;500;600;700&display=swap");
+
+body {
+    font-size: clamp(0, 7rem, calc(0, 5rem + 1.5vw), 3rem);
+    font-family: "Cormorant SC", serif;
+
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Cormorant SC", serif;
+}
+
+a {
+    text-decoration: none;
+    /* remove o sublinhado dos links */
+    color: white;
+    /* altera a cor de todos os links das páginas */
+}
+
+header {
+    background-color: #AE5D45;
+    padding: 2vw 7vw 2vw 7vw;
+
+
+    & nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        & ul {
+            display: flex;
+
+            & li {
+                margin: 0px 10px 0px 10px;
+            }
+
+        }
+    }
+}
+
+.logo {
+    display: flex;
+
+}
+
+header nav h1 a {
+    font-size: 2rem;
+    color: rgb(187, 132, 15);
+    font-weight: bold;
+}
+
+.imagem {
+    background: url(../src/images/lirios.png);
+    color: white;
+}
