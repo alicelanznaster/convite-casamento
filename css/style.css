@@ -1,17 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kapakana:wght@300..400&display=swap");
 
 body {
     font-size: clamp(0, 7rem, calc(0, 5rem + 1.5vw), 3rem);
     font-family: "Cormorant SC", serif;
+    box-sizing:border-box;
 
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1, h2, h3, h4, h5, h6 {
     font-family: "Cormorant SC", serif;
 }
 
@@ -22,39 +19,489 @@ a {
     /* altera a cor de todos os links das páginas */
 }
 
-header {
+header{
     background-color: #AE5D45;
-    padding: 2vw 7vw 2vw 7vw;
-
-
-    & nav {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-
-        & ul {
-            display: flex;
-
-            & li {
-                margin: 0px 10px 0px 10px;
-            }
-
-        }
-    }
-}
-
-.logo {
-    display: flex;
-
-}
-
-header nav h1 a {
-    font-size: 2rem;
-    color: rgb(187, 132, 15);
-    font-weight: bold;
-}
-
-.imagem {
-    background: url(../src/images/lirios.png);
     color: white;
+    padding: 20px 60px;
+    
+}
+
+header nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo{
+    display: flex;
+    gap:20px;
+    align-items: center;
+}
+
+.logo a{
+    color: #d1af51;
+    font-size: 2rem;
+    font-weight: 800;
+}
+
+nav ul{
+    display: flex;
+    gap: 0px 50px;
+}
+
+.jj{
+    text-align:center;
+    padding: 60px 20px;
+}
+
+.jj h1{
+    font-size:5rem;
+    color:#e6b06a;
+    font-family: "Kapakana", cursive; 
+}
+
+
+.imagem{
+    background: url("../src/images/lirios.png");
+    height:65vh;
+    background-size:cover;  
+    text-align: center;
+    color: white;
+    flex-direction:column;
+    padding:20px;
+}
+
+p.texto{
+    display: block;
+}
+
+p.resumo{
+    display: none;
+}
+
+.imagem p{
+    padding: 10vw 12vw 0 12vw;
+    font-size: 1.8rem;
+}
+
+
+.cards ul{
+    display: grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:30px;
+    max-width:900px;
+    margin:80px auto;
+    align-items: center;
+}
+
+.card{
+    height:65vh;
+    width: 80%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color: white;
+    text-align:center;
+    background-size:cover;
+    background-position:center;
+    margin: 20px 40px 20px 40px;
+    border-radius: 15px;
+}
+
+.card h1{
+    font-size:1.3rem;
+    padding:8px 15px;
+    border-radius:4px;
+}
+
+.story{
+    background-image:url("../src/images/ourStory.png");
+}
+
+.details{
+    background-image:url("../src/images/bouquet.png");
+}
+
+.rsvp{
+    background-image:url("../src/images/rsvp.png");
+}
+
+.registry{
+    background-image:url("../src/images/registiry.png");
+}
+
+.dresscode{
+    background:#b76a50;
+    color:white;
+    text-align:center;
+    padding: 2vw;
+    width:60vw;
+    margin:40px auto;
+    border-radius: 25px;
+}
+
+.dresscode h2{
+    font-family: "Kapakana", cursive ;
+    font-size: 4rem;
+}
+
+.dresscode p{
+    font-size: 1.7rem;
+}
+
+.frase-mobile{
+display:none;
+}
+
+.viagem{
+    background: url("../src/images/costaAmalfitana.png");
+    background-size:cover;
+    background-position:center;
+    height: 65vh;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    color:white;
+    padding: 20px 20px 30px 20px ;
+    
+}
+
+.viagem button{
+    background-color: #AE5D45;
+    padding: 20px 4vw;
+    border-radius: 30px;
+    font-size: 1.5rem;
+   
+}
+
+.viagem h1{
+    padding: 20px 0;
+    font-family: "Kapakana", cursive;
+    font-size: 5rem;
+}
+
+.viagem p{
+    font-size: 1.7rem;
+    margin: 35px 0 50px 0;
+}
+
+.viagem-desktop{
+    display: block;
+}
+
+.viagem-mobile{
+    display: none;
+}
+
+footer{
+    background-color: #AE5D45;
+    height: 16vh;
+    text-align: center;
+    font-size: 2rem;
+    color: #d1af51;  
+}
+
+footer h2{
+    font-size: 2rem;
+    padding: 10px 0 10px 0;
+}
+
+/* ----------------------------*/
+
+
+/* RESPONSIVIDADE */
+
+@media (max-width:900px){
+
+
+header{
+    padding: 20px 30px;
+}
+
+nav ul{
+    gap:20px;
+}
+
+
+.jj{
+    text-align:center;
+}
+
+.jj h1{
+    font-size:5rem;
+}
+
+.imagem{
+    height:60vh;
+}
+
+section div.imagem p.texto{
+    display: none;
+}
+
+section div.imagem p.resumo{
+    display: block;
+}
+
+.imagem p {
+    display: grid;
+    font-size: 1.7rem;
+}
+.card{
+    height: 40vh;
+}
+
+.cards ul{
+    grid-template-columns:1fr 1fr;
+    gap:20px;
+}
+
+.viagem-desktop{
+    display: none;
+}
+
+.viagem-mobile{
+    display: block;
+}
+.frase-desktop{
+    display:none;
+}
+
+.frase-mobile{
+    display:block;
+}
+
+.dresscode h2{
+    font-size: 4rem;
+}
+.dresscode p{
+    font-size: 1.8rem;
+}
+
+.viagem{
+    height:60vh;
+    padding: 40px ;
+}
+
+.viagem h1{
+    display: grid;
+    margin: 10px 0 0 0 ;
+}
+
+.viagem button{
+    padding: 10px 25px 10px 25px;
+}
+
+footer{ 
+    height: 16vh;
+}
+
+footer h2{
+    font-size: 2rem;
+    display: grid;
+}
+
+footer p{
+    font-size: 1.5rem;
+}
+
+}
+
+/*------------*/
+
+@media (max-width:768px){
+
+header nav{
+    flex-direction:column;
+    gap:10px;
+}
+
+nav ul{
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:15px;
+    font-size: 1.2rem;
+}
+
+.logo p{
+    font-size: 1.1rem;
+}
+
+.logo{
+    flex-direction:column;
+    gap:5px;
+}
+
+.jj{
+    padding:40px 20px;
+}
+
+.jj h1{
+    font-size:4.4rem;
+}
+
+.imagem{
+    height:50vh;
+}
+
+section div.imagem p.texto{
+    display: none;
+}
+
+section div.imagem p.resumo{
+    display: block;
+}
+
+.imagem p{
+    font-size:1.5rem;
+}
+
+
+.cards ul{
+    grid-template-columns:1fr;
+    width: 70%;
+}
+
+.card{
+    height: 48vh;
+}
+
+.dresscode{
+    padding: 20px 60px;
+}
+
+.dresscode h2{
+    font-size: 2.8rem;
+}
+
+.dresscode p{
+    font-size: 1.7rem;
+}
+
+.viagem-desktop{
+    display: none;
+}
+
+.viagem-mobile{
+    display: block;
+}
+.frase-desktop{
+    display:none;
+}
+
+.frase-mobile{
+    display:block;
+}
+
+.viagem{
+    height:55vh;
+    padding: 20px 0 20px 0;
+}
+
+.viagem p{
+    font-size: 1.5rem;
+}
+
+.viagem button{
+    padding: 15px 30px;
+    font-size: 1.4rem;
+}
+
+footer h2{
+    font-size:30px;
+}
+
+footer{
+    height: 15vh;
+    display: grid;
+}
+
+}
+
+/*------------------------------*/
+
+@media (max-width:480px){
+
+header{
+    padding: 20px 30px;
+}
+
+.jj h1{
+    font-size:3.7rem;
+}
+
+.imagem{
+    height:45vh;
+    padding: 20px 0 20px 0;
+}
+
+.imagem p{
+    font-size:1.5rem;
+}
+section div.imagem p.texto{
+    display: none;
+}
+
+section div.imagem p.resumo{
+    display: block;
+}
+.card{
+    height:50vh;
+}
+
+.card h1{
+    font-size:1.3rem;
+}
+
+.dresscode{
+    padding: 15px 30px;
+}
+
+.dresscode p{
+    font-size: 1.3rem;
+}
+
+.viagem{
+    height: 45vh;
+    padding: 10px 5px 10px 5px;
+}
+
+.viagem h1{
+    font-size: 3.5rem;
+}
+
+.viagem p{
+    font-size:1.3rem;
+}
+
+.viagem button{
+ padding: 10px 20px 10px 20px ;   
+}
+
+.viagem-desktop{
+    display: none;
+}
+
+.viagem-mobile{
+    display: block;
+}
+.frase-desktop{
+    display:none;
+}
+
+.frase-mobile{
+    display:block;
+}
+
+footer h2{
+    font-size: 2rem;
+}
+
+footer{
+    height: 15vh;
+    display: grid;
+}
+footer p{
+    font-size: 1.7rem;
+}
 }
