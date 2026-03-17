@@ -80,7 +80,7 @@ p.resumo{
 }
 
 .imagem p{
-    padding: 10vw 12vw 0 12vw;
+    padding: 6vw 12vw 5vw 12vw;
     font-size: 1.8rem;
 }
 
@@ -436,6 +436,7 @@ header{
 }
 
 .imagem p{
+    padding: 9vw;
     font-size:1.5rem;
 }
 section div.imagem p.texto{
